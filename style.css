@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: rgba(202, 249, 255, 0.555);
+}
+
+*:hover::selection {
+  color: black;
+}
+
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
@@ -19,7 +27,7 @@ main {
 
 body > header {
   text-align: center;
-  background-color: rgba(29, 186, 248, 0.836);
+  background-color: rgba(0, 57, 75, 0.747);
 }
 
 header,
@@ -50,7 +58,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: rgb(29, 186, 248);
+  color: rgb(0, 57, 75);
   font-weight: bold;
 }
 
@@ -64,6 +72,7 @@ a:active {
 
 nav a {
   color: rgb(255, 255, 255);
+  margin-top: 10px;
 }
 
 nav a:hover {
@@ -109,4 +118,13 @@ article + article {
 
 .sub-subtitle {
   margin: 10px 0;
+}
+
+.profession::after {
+  padding-left: 10px;
+  content: "🍂";
+}
+
+.profession {
+  margin-bottom: 30px;
 }
