@@ -3,6 +3,7 @@
 }
 
 *::selection {
+  background-color: rgb(202, 249, 255);
   background-color: rgba(202, 249, 255, 0.555);
   color: black;
 }
@@ -28,6 +29,7 @@ main {
 
 body > header {
   text-align: center;
+  background-color: rgb(0, 57, 75);
   background-color: rgba(0, 57, 75, 0.747);
   color: white;
 }
@@ -35,20 +37,13 @@ body > header {
 header,
 h1,
 h2,
-h3,
-h4 {
-  font-family: "Merienda", cursive;
-}
-
-header,
-h1,
-h2,
 h3 {
+  font-family: "Merienda", cursive;
   font-weight: 600;
 }
 
 h4,
-header p {
+nav p {
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
@@ -91,10 +86,6 @@ ul {
   list-style: circle;
 }
 
-main article {
-  margin-top: 50px;
-}
-
 nav a + a::before {
   content: "|";
   margin-left: 10px;
@@ -114,18 +105,38 @@ section + section {
   margin-top: 30px;
 }
 
+ul {
+  margin: 0;
+}
+
+li {
+  line-height: 1.25rem;
+}
+
 .underline-title {
-  padding-top: 30px;
-  margin: 5px 0 25px;
+  padding: 30px 0 20px;
+  margin: 5px 0;
+  border-top: 1px solid rgb(46, 46, 46);
   border-top: 1px solid rgba(77, 77, 77, 0.486);
 }
 
 .subtitle {
-  margin-bottom: 0px;
+  margin: 0 0 15px;
+  display: inline-block;
 }
 
 .sub-subtitle {
-  margin: 10px 0;
+  margin: 0 0 15px;
+  display: inline-block;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.profession {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
 }
 
 .profession::after {
@@ -133,7 +144,6 @@ section + section {
   content: "🍂";
 }
 
-.profession {
-  margin-bottom: 30px;
-  font-size: 20px;
+#experience {
+  margin-top: 40px;
 }
