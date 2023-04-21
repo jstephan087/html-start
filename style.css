@@ -54,23 +54,51 @@ a {
   font-weight: bold;
 }
 
+a:hover {
+  color: rgb(29, 248, 193);
+}
+
+a:active {
+  color: rgb(15, 167, 129);
+}
+
 nav a {
   color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+  color: rgb(253, 249, 20);
+}
+
+nav a:active {
+  color: rgb(255, 194, 102);
 }
 
 ul {
   list-style: circle;
 }
 
-.margin-bottom0 {
-  margin-bottom: 0;
+main article {
+  margin-top: 50px;
 }
 
-.margin-top40 {
-  margin-top: 40px;
+nav a + a::before {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav a + a:hover::before,
+nav a + a:active::before {
+  color: white;
+}
+
+article + article {
+  margin-top: 50px;
 }
 
 .underline-title {
+  padding-bottom: 10px;
   margin: 5px 0 25px;
   border-bottom: 1px solid rgba(77, 77, 77, 0.486);
 }
