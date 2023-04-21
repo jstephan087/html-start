@@ -4,13 +4,14 @@
 
 *::selection {
   background-color: rgba(202, 249, 255, 0.555);
+  color: black;
 }
 
 *:hover::selection {
   color: black;
 }
 
-body {
+html {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
@@ -28,6 +29,7 @@ main {
 body > header {
   text-align: center;
   background-color: rgba(0, 57, 75, 0.747);
+  color: white;
 }
 
 header,
@@ -73,6 +75,8 @@ a:active {
 nav a {
   color: rgb(255, 255, 255);
   margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 nav a:hover {
@@ -103,13 +107,17 @@ nav a + a:active::before {
 }
 
 article + article {
-  margin-top: 50px;
+  margin-top: 40px;
+}
+
+section + section {
+  margin-top: 30px;
 }
 
 .underline-title {
-  padding-bottom: 10px;
+  padding-top: 30px;
   margin: 5px 0 25px;
-  border-bottom: 1px solid rgba(77, 77, 77, 0.486);
+  border-top: 1px solid rgba(77, 77, 77, 0.486);
 }
 
 .subtitle {
@@ -127,4 +135,5 @@ article + article {
 
 .profession {
   margin-bottom: 30px;
+  font-size: 20px;
 }
