@@ -15,14 +15,14 @@
 html {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.25rem;
 }
 
 main {
   margin: 0 auto;
   max-width: 75ch;
-  padding: 1.5rem 5rem;
+  padding: 1.5rem 1rem;
 }
 
 body > header {
@@ -95,7 +95,7 @@ article {
 }
 
 article + article {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 p,
@@ -153,8 +153,8 @@ ul {
 .title {
   position: relative;
   left: -1rem;
-  padding: 1.5rem 0 1rem;
-  margin: 0.25rem 0;
+  padding: 1rem 0 1rem;
+  margin: 0.15rem 0;
   font-size: 1rem;
 }
 
@@ -172,8 +172,14 @@ ul {
   font-family: "Roboto", sans-serif;
 }
 
-#experience {
-  margin-top: 2rem;
+#profile {
+  padding-right: 0.5rem;
+}
+
+#profile > h2 {
+  position: relative;
+  left: -1rem;
+  font-size: 1.25rem;
 }
 
 #experience,
@@ -183,12 +189,56 @@ ul {
   border-top: 0.05rem solid rgba(77, 77, 77, 0.486);
 }
 
-#profile > h2 {
-  position: relative;
-  left: -1rem;
-  font-size: 1.25rem;
+@media print {
+  nav,
+  .hire-me {
+    display: none;
+  }
 }
 
-#profile {
-  padding-right: 0.5rem;
+@media screen and (min-width: 664px) {
+  main {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 1.5rem 3rem;
+  }
+
+  article + article {
+    margin-top: 1.5rem;
+  }
+
+  .title {
+    padding: 1.5rem 0 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+
+  main {
+    padding: 1.5rem 4rem;
+  }
+
+  article + article {
+    margin-top: 2.5rem;
+  }
+
+  .hire-me {
+    position: fixed;
+  }
+
+  .title {
+    padding: 2.5rem 0 1rem;
+    margin: 0.25rem 0;
+  }
 }
