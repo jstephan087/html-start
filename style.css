@@ -34,7 +34,6 @@ body > header {
   color: white;
 }
 
-header,
 h1,
 h2,
 h3 {
@@ -97,6 +96,10 @@ nav a + a:active::before {
   color: white;
 }
 
+article {
+  padding: 0 20px;
+}
+
 article + article {
   margin-top: 40px;
 }
@@ -113,11 +116,25 @@ li {
   line-height: 1.25rem;
 }
 
-.underline-title {
+.hire-me {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  background-color: rgb(61, 255, 255);
+  color: black;
+  font-weight: 500;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  position: relative;
+  left: -20px;
   padding: 30px 0 20px;
   margin: 5px 0;
-  border-top: 1px solid rgb(46, 46, 46);
-  border-top: 1px solid rgba(77, 77, 77, 0.486);
 }
 
 .subtitle {
@@ -146,4 +163,20 @@ li {
 
 #experience {
   margin-top: 40px;
+}
+
+#experience,
+#skills,
+#contact {
+  border-top: 1px solid rgb(46, 46, 46);
+  border-top: 1px solid rgba(77, 77, 77, 0.486);
+}
+
+#profile > h2 {
+  position: relative;
+  left: -20px;
+}
+
+#profile {
+  padding-right: 10px;
 }
