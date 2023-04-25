@@ -1,3 +1,5 @@
+/* generell css */
+
 * {
   box-sizing: border-box;
 }
@@ -12,24 +14,21 @@
   color: black;
 }
 
+.hire-me::selection {
+  background-color: rgb(0, 113, 128);
+  background-color: rgba(0, 107, 121, 0.555);
+  color: white;
+}
+
+.hire-me:hover::selection {
+  color: white;
+}
+
 html {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.25rem;
-}
-
-main {
-  margin: 0 auto;
-  max-width: 75ch;
-  padding: 1.5rem 1rem;
-}
-
-body > header {
-  text-align: center;
-  background-color: rgb(0, 57, 75);
-  background-color: rgba(0, 57, 75, 0.747);
-  color: white;
 }
 
 h1,
@@ -59,35 +58,14 @@ a:active {
   color: rgb(15, 167, 129);
 }
 
-nav a {
-  color: rgb(255, 255, 255);
-  margin-top: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 0.85rem;
-}
-
-nav a:hover {
-  color: rgb(253, 249, 20);
-}
-
-nav a:active {
-  color: rgb(255, 194, 102);
+p,
+ul {
+  font-size: 0.75rem;
 }
 
 ul {
+  margin: 0;
   list-style: circle;
-}
-
-nav a + a::before {
-  content: "|";
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-nav a + a:hover::before,
-nav a + a:active::before {
-  color: white;
 }
 
 article {
@@ -98,36 +76,18 @@ article + article {
   margin-top: 1rem;
 }
 
-p,
-ul {
-  font-size: 0.75rem;
-}
-
 section + section {
   margin-top: 1.5rem;
 }
 
-ul {
-  margin: 0;
-}
-
-.hire-me {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 5rem;
-  background-color: rgb(61, 255, 255);
-  color: black;
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 0.5rem;
-  margin: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 0.4rem 0.75rem rgba(0, 0, 0, 0.1);
-}
+/* site header */
 
 .main-header {
-  padding: 3rem 0 1rem;
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+  background-color: rgb(0, 57, 75);
+  background-color: rgba(0, 57, 75, 0.747);
+  color: white;
 }
 
 .header-group {
@@ -150,6 +110,51 @@ ul {
   content: "🍂";
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation a {
+  color: rgb(255, 255, 255);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.85rem;
+}
+
+.navigation a:hover {
+  color: rgb(253, 249, 20);
+}
+
+.navigation a:active {
+  color: rgb(255, 194, 102);
+}
+
+.hire-me {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5rem;
+  background-color: rgb(61, 255, 255);
+  color: black;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.4rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+/* Content */
+
+main {
+  margin: 0 auto;
+  max-width: 75ch;
+  padding: 1.5rem 1rem;
+}
+
 .title {
   position: relative;
   left: -1rem;
@@ -158,18 +163,29 @@ ul {
   font-size: 1rem;
 }
 
+.exp-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-title,
 .subtitle {
-  margin: 0 0 0.15rem;
-  display: inline-block;
   font-size: 0.85rem;
 }
 
-.sub-subtitle {
-  margin: 0 0 0.15rem;
-  display: inline-block;
-  font-size: 0.65rem;
+.exp-subtitle {
+  font-size: 0.75rem;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
+}
+
+.exp-title {
+  margin: 0 0 0.15rem;
+}
+
+.exp-subtitle,
+.subtitle {
+  margin: 0 0 0.5rem;
 }
 
 #profile {
@@ -188,6 +204,8 @@ ul {
   border-top: 0.05rem solid rgb(46, 46, 46);
   border-top: 0.05rem solid rgba(77, 77, 77, 0.486);
 }
+
+/* Medie query */
 
 @media print {
   nav,
@@ -217,6 +235,28 @@ ul {
 
   .title {
     padding: 1.5rem 0 1rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation a + a::before {
+    content: "|";
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .navigation a + a:hover::before,
+  .navigation a + a:active::before {
+    color: white;
+  }
+
+  .exp-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
 
