@@ -165,6 +165,16 @@ section + section {
   margin: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 0.4rem 0.75rem var(--shadow-black);
+  transform-origin: 100% 0;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+header:hover .hire-me,
+header:focus-within .hire-me {
+  transform-origin: 100% 0;
+  transform: scale(1.4);
+  transition: transform 0.5s ease-in-out;
 }
 
 .hire-me::selection {
