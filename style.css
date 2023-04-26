@@ -54,14 +54,18 @@ a {
   text-decoration: none;
   color: var(--main-blue);
   font-weight: bold;
+  transition: color 0.25s ease-in;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--main-light-blue);
+  transition: color 0.25s ease-in;
 }
 
 a:active {
   color: var(--accent-blue);
+  transition: color 0.25s ease-in;
 }
 
 p,
@@ -133,14 +137,18 @@ section + section {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 0.85rem;
+  transition: color 0.25s ease-in;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus {
   color: var(--hover-yellow);
+  transition: color 0.25s ease-in;
 }
 
 .navigation a:active {
   color: var(--focus-orang);
+  transition: color 0.25s ease-in;
 }
 
 .hire-me {
@@ -164,7 +172,8 @@ section + section {
   color: var(--font-white);
 }
 
-.hire-me:hover::selection {
+.hire-me:hover::selection,
+.hire-me:focus::selection {
   color: var(--font-white);
 }
 
@@ -239,7 +248,8 @@ main {
   color: var(--font-white);
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer a:focus {
   color: var(--hover-yellow);
 }
 
@@ -287,6 +297,7 @@ main {
   }
 
   .navigation a + a:hover::before,
+  .navigation a + a:focus::before,
   .navigation a + a:active::before {
     color: var(--font-white);
   }
@@ -325,5 +336,14 @@ main {
   body {
     --main-black: white;
     --main-white: black;
+  }
+
+  *::selection {
+    background-color: var(--cyan-blue);
+    color: var(--main-white);
+  }
+
+  *:hover::selection {
+    color: var(--main-white);
   }
 }
