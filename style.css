@@ -191,7 +191,7 @@ header:focus-within .hire-me {
 
 main {
   margin: 0 auto;
-  max-width: 75ch;
+  max-width: 60ch;
   padding: 1.5rem 1rem;
 }
 
@@ -285,6 +285,20 @@ main {
 
   main {
     padding: 1.5rem 3rem;
+    max-width: 90ch;
+  }
+
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+  }
+
+  .article-content {
+    margin-top: 5rem;
+  }
+
+  .profile-content {
+    margin-top: 3rem;
   }
 
   article + article {
