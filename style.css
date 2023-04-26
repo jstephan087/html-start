@@ -4,31 +4,37 @@
   box-sizing: border-box;
 }
 
-*::selection {
-  background-color: rgb(202, 249, 255);
-  background-color: rgba(202, 249, 255, 0.555);
-  color: black;
-}
-
-*:hover::selection {
-  color: black;
-}
-
-.hire-me::selection {
-  background-color: rgb(0, 113, 128);
-  background-color: rgba(0, 107, 121, 0.555);
-  color: white;
-}
-
-.hire-me:hover::selection {
-  color: white;
-}
-
 html {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.25rem;
+}
+
+body {
+  --font-black: black;
+  --font-white: white;
+  --main-black: black;
+  --main-white: white;
+  --main-blue: rgb(0, 57, 75);
+  --main-middle-blue: rgb(0, 95, 125);
+  --main-light-blue: rgb(0, 106, 140);
+  --accent-blue: rgb(0, 107, 121, 0.5);
+  --cyan-blue: rgb(202, 249, 255);
+  --hover-yellow: rgb(253, 249, 20);
+  --focus-orang: rgb(255, 194, 102);
+  --shadow-black: rgba(0, 0, 0, 0.1);
+  background-color: var(--main-white);
+  color: var(--main-black);
+}
+
+*::selection {
+  background-color: var(--cyan-blue);
+  color: var(--main-black);
+}
+
+*:hover::selection {
+  color: var(--main-black);
 }
 
 h1,
@@ -46,16 +52,16 @@ nav p {
 
 a {
   text-decoration: none;
-  color: rgb(0, 57, 75);
+  color: var(--main-blue);
   font-weight: bold;
 }
 
 a:hover {
-  color: rgb(29, 248, 193);
+  color: var(--main-light-blue);
 }
 
 a:active {
-  color: rgb(15, 167, 129);
+  color: var(--accent-blue);
 }
 
 p,
@@ -85,14 +91,14 @@ section + section {
 .main-header {
   padding: 3rem 0 1.5rem;
   text-align: center;
-  background-color: rgb(0, 57, 75);
+  background-color: var(--main-blue);
   background: linear-gradient(
     180deg,
-    rgba(0, 57, 75, 1) 0%,
-    rgba(0, 95, 125, 1) 54%,
-    rgba(0, 106, 140, 1) 100%
+    var(--main-blue) 0%,
+    var(--main-middle-blue) 54%,
+    var(--main-light-blue) 100%
   );
-  color: white;
+  color: var(--font-white);
 }
 
 .header-group {
@@ -122,7 +128,7 @@ section + section {
 }
 
 .navigation a {
-  color: rgb(255, 255, 255);
+  color: var(--font-white);
   margin-top: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -130,26 +136,36 @@ section + section {
 }
 
 .navigation a:hover {
-  color: rgb(253, 249, 20);
+  color: var(--hover-yellow);
 }
 
 .navigation a:active {
-  color: rgb(255, 194, 102);
+  color: var(--focus-orang);
 }
 
 .hire-me {
   position: absolute;
+  cursor: pointer;
   right: 0;
   top: 0;
   width: 5rem;
-  background-color: rgb(61, 255, 255);
-  color: black;
+  background-color: var(--cyan-blue);
+  color: var(--font-black);
   font-size: 0.85rem;
   font-weight: 500;
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 0.4rem 0.75rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.4rem 0.75rem var(--shadow-black);
+}
+
+.hire-me::selection {
+  background-color: var(--main-light-blue);
+  color: var(--font-white);
+}
+
+.hire-me:hover::selection {
+  color: var(--font-white);
 }
 
 /* Content */
@@ -206,32 +222,31 @@ main {
 #experience,
 #skills,
 #contact {
-  border-top: 0.05rem solid rgb(0, 57, 75);
-  border-top: 0.05rem solid rgba(0, 57, 75, 0.75);
+  border-top: 0.05rem solid var(--main-blue);
 }
 
 /* Footer */
 
 .footer {
-  background-color: rgb(0, 57, 75);
-  color: white;
+  background-color: var(--main-blue);
+  color: var(--font-white);
   text-align: center;
   margin: 2rem 0 0;
   padding: 2rem 0 3rem;
 }
 
 .footer a {
-  color: white;
+  color: var(--font-white);
 }
 
 .footer a:hover {
-  color: rgb(253, 249, 20);
+  color: var(--hover-yellow);
 }
 
 /* Medie query */
 
 @media print {
-  nav,
+  .navigation,
   .hire-me {
     display: none;
   }
@@ -273,7 +288,7 @@ main {
 
   .navigation a + a:hover::before,
   .navigation a + a:active::before {
-    color: white;
+    color: var(--font-white);
   }
 
   .exp-header {
@@ -303,5 +318,12 @@ main {
   .title {
     padding: 2.5rem 0 1rem;
     margin: 0.25rem 0;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --main-black: white;
+    --main-white: black;
   }
 }
